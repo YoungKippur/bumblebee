@@ -149,7 +149,7 @@ menu "ESPDrone Config"
             range 0 43 if TARGET_ESP32_S2_DRONE_V1_2
             default 11 if TARGET_ESP32_S2_DRONE_V1_2
             range 0 43 if TARGET_ESP32_S3_BUMBLEBEE_V1
-            default 11 if TARGET_ESP32_S3_BUMBLEBEE_V1
+            default 5 if TARGET_ESP32_S3_BUMBLEBEE_V1
             help
                 GPIO number (IOxx) I2C0_PIN_SDA
 
@@ -162,7 +162,7 @@ menu "ESPDrone Config"
             range 0 43 if TARGET_ESP32_S2_DRONE_V1_2
             default 10 if TARGET_ESP32_S2_DRONE_V1_2
             range 0 43 if TARGET_ESP32_S3_BUMBLEBEE_V1
-            default 10 if TARGET_ESP32_S3_BUMBLEBEE_V1
+            default 6 if TARGET_ESP32_S3_BUMBLEBEE_V1
             help
                 GPIO number (IOxx) I2C0_PIN_SCL
 
@@ -253,7 +253,7 @@ menu "ESPDrone Config"
             range 0 43 if TARGET_ESP32_S2_DRONE_V1_2
             default 12 if TARGET_ESP32_S2_DRONE_V1_2
             range 0 43 if TARGET_ESP32_S3_BUMBLEBEE_V1
-            default 12 if TARGET_ESP32_S3_BUMBLEBEE_V1
+            default 8 if TARGET_ESP32_S3_BUMBLEBEE_V1
             help
                 GPIO number (IOxx) MPU_PIN_INT
 
@@ -266,7 +266,7 @@ menu "ESPDrone Config"
             range 1 10 if TARGET_ESP32_S2_DRONE_V1_2
             default 2 if TARGET_ESP32_S2_DRONE_V1_2
             range 1 10 if TARGET_ESP32_S3_BUMBLEBEE_V1
-            default 2 if TARGET_ESP32_S3_BUMBLEBEE_V1
+            default 10 if TARGET_ESP32_S3_BUMBLEBEE_V1
             help
                 GPIO number (IOxx) ADC1_PIN
 
@@ -279,7 +279,7 @@ menu "ESPDrone Config"
             range 0 43 if TARGET_ESP32_S2_DRONE_V1_2
             default 1 if TARGET_ESP32_S2_DRONE_V1_2
             range 0 43 if TARGET_ESP32_S3_BUMBLEBEE_V1
-            default 1 if TARGET_ESP32_S3_BUMBLEBEE_V1
+            default 0 if TARGET_ESP32_S3_BUMBLEBEE_V1
             help
                 GPIO number (IOxx) EXT01_PIN
     endmenu
@@ -294,7 +294,7 @@ menu "ESPDrone Config"
             range 0 43 if TARGET_ESP32_S2_DRONE_V1_2
             default 7 if TARGET_ESP32_S2_DRONE_V1_2
             range 0 43 if TARGET_ESP32_S3_BUMBLEBEE_V1
-            default 7 if TARGET_ESP32_S3_BUMBLEBEE_V1
+            default 11 if TARGET_ESP32_S3_BUMBLEBEE_V1
             help
                 GPIO number (IOxx) LED_PIN_BLUE
 
@@ -320,7 +320,7 @@ menu "ESPDrone Config"
             range 0 43 if TARGET_ESP32_S2_DRONE_V1_2
             default 8 if TARGET_ESP32_S2_DRONE_V1_2
             range 0 43 if TARGET_ESP32_S3_BUMBLEBEE_V1
-            default 8 if TARGET_ESP32_S3_BUMBLEBEE_V1
+            default 43 if TARGET_ESP32_S3_BUMBLEBEE_V1
             help
                 GPIO number (IOxx) LED_PIN_RED
 
@@ -330,7 +330,8 @@ menu "ESPDrone Config"
         choice
             prompt "Motor type"
             default MOTOR_BRUSHED_715 if TARGET_ESPLANE_V1 || TARGET_ESPLANE_V2_S2
-            default MOTOR_BRUSHED_720 if TARGET_ESP32_S2_DRONE_V1_2 || TARGET_ESP32_S3_BUMBLEBEE_V1
+            default MOTOR_BRUSHED_720 if TARGET_ESP32_S2_DRONE_V1_2
+            default MOTOR_BRUSHED_715 if TARGET_ESP32_S3_BUMBLEBEE_V1
             
             config MOTOR_BRUSHED_715
                 bool "brushed 715 motor"
@@ -348,7 +349,7 @@ menu "ESPDrone Config"
             range 0 43 if TARGET_ESP32_S2_DRONE_V1_2
             default 5 if TARGET_ESP32_S2_DRONE_V1_2
             range 0 43 if TARGET_ESP32_S3_BUMBLEBEE_V1
-            default 5 if TARGET_ESP32_S3_BUMBLEBEE_V1
+            default 7 if TARGET_ESP32_S3_BUMBLEBEE_V1
             help
                 GPIO number (IOxx) MOTOR01_PIN
 
@@ -361,7 +362,7 @@ menu "ESPDrone Config"
             range 0 43 if TARGET_ESP32_S2_DRONE_V1_2
             default 6 if TARGET_ESP32_S2_DRONE_V1_2
             range 0 43 if TARGET_ESP32_S3_BUMBLEBEE_V1
-            default 6 if TARGET_ESP32_S3_BUMBLEBEE_V1
+            default 4 if TARGET_ESP32_S3_BUMBLEBEE_V1
             help
                 GPIO number (IOxx) MOTOR02_PIN
 
@@ -387,7 +388,7 @@ menu "ESPDrone Config"
             range 0 43 if TARGET_ESP32_S2_DRONE_V1_2
             default 4 if TARGET_ESP32_S2_DRONE_V1_2
             range 0 43 if TARGET_ESP32_S3_BUMBLEBEE_V1
-            default 4 if TARGET_ESP32_S3_BUMBLEBEE_V1
+            default 1 if TARGET_ESP32_S3_BUMBLEBEE_V1
             help
                 GPIO number (IOxx) MOTOR04_PIN
     endmenu
