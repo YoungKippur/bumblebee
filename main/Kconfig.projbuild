@@ -2,7 +2,7 @@ menu "ESPDrone Config"
 
     choice
         prompt "ESP_Drone hardware version"
-        default TARGET_ESP32_S2_DRONE_V1_2 if IDF_TARGET_ESP32S3
+        default TARGET_ESP32_S3_BUMBLEBEE_V1 if IDF_TARGET_ESP32S3
         default TARGET_ESP32_S2_DRONE_V1_2 if IDF_TARGET_ESP32S2
         default TARGET_ESPLANE_V1 if IDF_TARGET_ESP32
 
@@ -16,7 +16,7 @@ menu "ESPDrone Config"
             bool "esp-drone with ESP32-S2/ESP32-S3 onboard"
         
         config TARGET_ESP32_S3_BUMBLEBEE_V1
-            bool "Bumblebee :V"
+            bool "Bumblebee :V (seeed studio xiao esp32s3)"
 
     endchoice
 
